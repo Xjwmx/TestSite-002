@@ -1,0 +1,45 @@
+---
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <Nav />
+    <slot />
+
+    <div class="footer">
+      <Footer />
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+</style>

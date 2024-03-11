@@ -1,0 +1,53 @@
+---
+
+---
+
+<nav>
+  <div class="title">
+    <h1>Austin Mueck</h1>
+  </div>
+  <div class="links">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style lang="scss">
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .title {
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+  }
+
+  .links {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li {
+        list-style: none;
+        margin: 0 1rem;
+        a {
+          text-decoration: none;
+          color: black;
+          &:hover {
+            color: blue;
+          }
+        }
+      }
+    }
+  }
+</style>
