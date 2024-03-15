@@ -1,18 +1,14 @@
 ---
-import "../styles/styles.css";
 import Social from "./Social.astro";
 ---
 
 <div class="footer">
   <div class="container">
     <div class="row-1">
-      <p>Copyright: Austin Mueck 2024</p>
+      <p>&copy; Austin Mueck 2024</p>
     </div>
     <div class="row-2">
       <Social />
-    </div>
-    <div class="row-3">
-      <p>Developed by J.Milner 2024. All Rights Reserved.</p>
     </div>
   </div>
 </div>
@@ -27,7 +23,7 @@ import Social from "./Social.astro";
   .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; // wrap the content if it overflows
   }
@@ -36,7 +32,7 @@ import Social from "./Social.astro";
     display: inline-block;
     justify-content: center;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0 2rem;
   }
   .row-1 {
     @include padding();
