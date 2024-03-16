@@ -1,3 +1,64 @@
+# Welcome to Austinmueck.com
+
+** Technologies **
+
+- Node.js
+- Astro.js
+  - Pages
+  - Basic Components
+- Astro DB
+  - TO DO
+- Typscript
+  - Used When Nessesary
+- React
+  - Interactive Components
+- SCSS
+  - Global Styling (depreciated?)
+- Stylelint
+
+## TO DO
+
+_ Clean up and re-factor where possible
+_ Set Up Routes
+_ Inteactivity
+_ DB For Project Pages
+
+## DEV SITE MAP (DEV)
+
+├── public/
+│ └── favicon.svg (To Do)
+│ └── public_img/ - non-processed images
+| └── images (To Do)
+├── src/
+│ └── assets/
+│ | | | └── styles/
+│ | | | └── cursor.css --Cursor Styles
+│ | | | └── Root.css --Re-factor global Styles
+│ | | └── img_projects/
+│ | | | └── img.jpg
+│ | | └── js/
+│ | | | └── inline-vanilla.js
+│ └── components/
+│ | └── Nav.astro --Global Navigation
+| | └── Footer.astro --Global Footer
+| | └── Social.astro --Animated Social Icons
+| | └── MouseEffect.jsx --React Comp. => cursor.js
+| | └── Hero.astro -- Primary Block for Home
+| | └── Projects.astro --project links (TD make dynamic)
+| | └── Footer.astro --Global Footer
+│ └── layouts/
+│ | | └── Layout.astro --primary layout
+│ └── pages/
+| | └── brightroom.astro
+| | └── brightroom.astro
+| | └── brightroom.astro
+| | └── brightroom.astro
+| | └── brightroom.astro
+│ └── index.astro --Home Page
+│ └── 404.astro --I can't find it, sorry (TD)
+|
+└── package.json
+
 # Astro Starter Kit: Basics
 
 ```sh

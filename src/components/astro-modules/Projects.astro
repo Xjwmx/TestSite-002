@@ -1,0 +1,47 @@
+---
+import "../../assets/styles/styles.css";
+---
+
+<div class="container">
+  <h3 class="row no-baseline">Latest Projects</h3>
+  <div class="row">
+    <h4 class="super"><a href="#">Romeo & Juliet</a></h4>
+  </div>
+
+  <div class="row">
+    <h4 class="super"><a href="#">Christmas Carol</a></h4>
+  </div>
+
+  <div class="row">
+    <h4 class="super"><a href="#">CLUE</a></h4>
+  </div>
+</div>
+
+<style>
+  .container {
+    overflow: hidden;
+  }
+
+  .super {
+    font-size: var(--font-size-super);
+    font-weight: 900;
+    margin: 0;
+  }
+
+  a {
+    display: inline-block;
+    line-height: 1;
+    color: var(--bg-color-lighter);
+    transition: 0.5s ease-in-out;
+  }
+
+  a:hover {
+    position: relative;
+    z-index: 100;
+    color: var(--accent-color-lighter);
+    font-size: calc(var(--font-size-super) * 1.1);
+    transform-origin: bottom left;
+    /* transform: scale(1.1); */
+    transition: 0.5s ease-in-out;
+  }
+</style>

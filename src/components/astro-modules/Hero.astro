@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import image01 from "../../assets/img_projects/brightroom/brightroom_104.jpg";
+import image02 from "../../assets/img-romeo/romeo_104.jpg";
+import image03 from "../../assets/img-carol/carol_104.jpg";
+---
+
+<div class="heroContainer">
+  <div class="heroContent">
+    <div class="heroText">
+      <h2>Scenic Design</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia modi
+        voluptas nihil impedit, tempore et ut facere quaerat quis repellendus
+        eaque explicabo reprehenderit voluptatem adipisci. Qui illo expedita sit
+        officiis!
+      </p>
+    </div>
+
+    <div class="image-position">
+      <Image src={image01} alt="#" />
+    </div>
+  </div>
+
+  <style lang="css">
+    .heroContainer {
+      margin: 4rem auto;
+    }
+
+    .heroContent {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .heroText {
+      max-width: 400px;
+    }
+
+    img {
+      width: 400px;
+      height: auto;
+    }
+  </style>
+</div>
