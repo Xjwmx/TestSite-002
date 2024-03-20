@@ -1,47 +1,113 @@
 ---
-import { Image } from "astro:assets";
-import image01 from "../../assets/img_projects/brightroom/brightroom_104.jpg";
-import image02 from "../../assets/img-romeo/romeo_104.jpg";
-import image03 from "../../assets/img-carol/carol_104.jpg";
+
 ---
 
-<div class="heroContainer">
-  <div class="heroContent">
-    <div class="heroText">
-      <h2>Scenic Design</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia modi
-        voluptas nihil impedit, tempore et ut facere quaerat quis repellendus
-        eaque explicabo reprehenderit voluptatem adipisci. Qui illo expedita sit
-        officiis!
-      </p>
-    </div>
-
-    <div class="image-position">
-      <Image src={image01} alt="#" />
+<div class="background">
+  <div
+    class="background-image"
+    style="background-image: url('./brightroom_107.jpg');"
+  >
+  </div>
+  <div
+    class="background-image"
+    style="background-image: url('./carol_103.jpg');"
+  >
+  </div>
+  <div
+    class="background-image"
+    style="background-image: url('./clue_119.jpg');"
+  >
+  </div>
+  <div class="overlay"></div>
+  <div class="wrapper">
+    <h1 transition:name="heroName">Austin Mueck</h1>
+    <h3>Scenic Designer</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam saepe,
+      commodi ex eius quidem vitae consequuntur dolor exercitationem doloribus,
+      veritatis incidunt excepturi at nemo eum reiciendis. Officia pariatur
+      sequi laborum.
+    </p>
+    <div class="links">
+      <ul>
+        <li><a class="button" href="./about">About</a></li>
+        <li><a class="button" href="./projects">Projects</a></li>
+        <li><a class="button" href="./contact">Contact</a></li>
+      </ul>
     </div>
   </div>
-
-  <style lang="css">
-    .heroContainer {
-      margin: 4rem auto;
-    }
-
-    .heroContent {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .heroText {
-      max-width: 400px;
-    }
-
-    img {
-      width: 400px;
-      height: auto;
-    }
-  </style>
 </div>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    var images = document.querySelectorAll(".background-image");
+    var currentImageIndex = 0;
+
+    setInterval(function () {
+      images[currentImageIndex].style.opacity = 0;
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      images[currentImageIndex].style.opacity = 1;
+    }, 4000); // Change image every 4 seconds
+  });
+</script>
+
+<style>
+  .background {
+    position: relative;
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1.25s ease-in-out;
+  }
+
+  .background-image:first-child {
+    opacity: 1;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--bg-color);
+    opacity: 0.65; /* Adjust color and opacity as needed */
+    z-index: 1;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+    height: 100vh;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #rotating-image {
+    margin: 0 0rem 2rem 0;
+    aspect-ratio: 16 / 9;
+    max-width: 800px; /* Adjust as needed */
+    object-fit: cover;
+  }
+
+  .button-section {
+    margin: 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+</style>

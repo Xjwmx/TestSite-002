@@ -6,6 +6,8 @@
   *::before,
   *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   /* Remove default margin */
@@ -35,7 +37,6 @@
 
   /* Set core body defaults */
   body {
-    min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
   }
@@ -93,18 +94,18 @@
     --octave: 2;
 
     /* Set the Scale */
-    --typeScale: var(--majorThird);
+    --typeScale: var(--perfectFourth);
 
     @media screen and (max-width: 1200px) {
-      --typeScale: var(--minorThird);
+      --typeScale: var(--majorThird);
     }
 
     @media screen and (max-width: 900px) {
-      --typeScale: var(--minorThird);
+      --typeScale: var(--majorThird);
     }
 
     @media screen and (max-width: 500px) {
-      --typeScale: var(--majorSecond);
+      --typeScale: var(--minorThird);
     }
 
     /* Override Font Size for 1rem and baseline */
@@ -135,56 +136,57 @@
     --baseline-xlrg: calc(var(--baseline-lrg) * var(--typescale));
 
     /* COLORS - Work on converting these to MAPs */
-    --outerspace-100: #f4f5f6;
-    --outerspace-200: #d2d6da;
-    --outerspace-300: #b0b8bf;
-    --outerspace-400: #8f99a3;
-    --outerspace-500: #6e7a87;
-    --outerspace-600: #535b65;
-    --outerspace-700: #373d43;
-    --outerspace-800: #1c1f22;
-    --outerspace-900: #0d0e11;
+    --outerspace-100: hsl(210, 10%, 96%);
+    --outerspace-200: hsl(210, 10%, 84%);
+    --outerspace-300: hsl(208, 10%, 72%);
+    --outerspace-400: hsl(210, 10%, 60%);
+    --outerspace-500: hsl(211, 10%, 48%);
+    --outerspace-600: hsl(213, 10%, 36%);
+    --outerspace-700: hsl(210, 10%, 24%);
+    --outerspace-800: hsl(210, 10%, 12%);
+    --outerspace-900: hsl(225, 13%, 6%);
 
-    --cadet-100: #f3f6f6;
-    --cadet-200: #d0dcdc;
-    --cadet-300: #adc8c9;
-    --cadet-400: #adc2c2;
-    --cadet-500: #8aa8a8;
-    --cadet-600: #688d8d;
-    --cadet-700: #4f6d6e;
-    --cadet-800: #345051;
-    --cadet-900: #1a2323;
+    --cadet-100: hsl(180, 14%, 96%);
+    --cadet-200: hsl(180, 15%, 84%);
+    --cadet-300: hsl(182, 21%, 73%);
+    --cadet-400: hsl(180, 15%, 72%);
+    --cadet-500: hsl(180, 15%, 60%);
+    --cadet-600: hsl(180, 15%, 48%);
+    --cadet-700: hsl(182, 16%, 37%);
+    --cadet-800: hsl(182, 22%, 26%);
+    --cadet-900: hsl(180, 15%, 12%);
 
-    --bluey-100: #ecfafe;
-    --bluey-200: #b1ebfb;
-    --bluey-300: #77dcf8;
-    --bluey-400: #3dcdf5;
-    --bluey-500: #0cb9e9;
-    --bluey-600: #098bae;
-    --bluey-700: #065c74;
-    --bluey-800: #032e3a;
-    --bluey-900: #010f13;
+    --bluey-100: hsl(193, 90%, 96%);
+    --bluey-200: hsl(193, 90%, 84%);
+    --bluey-300: hsl(193, 90%, 72%);
+    --bluey-400: hsl(193, 90%, 60%);
+    --bluey-500: hsl(193, 90%, 48%);
+    --bluey-600: hsl(193, 90%, 36%);
+    --bluey-700: hsl(193, 90%, 24%);
+    --bluey-800: hsl(193, 90%, 12%);
+    --bluey-900: hsl(193, 90%, 4%);
 
-    --cosmic-100: #f8ecfe;
-    --cosmic-200: #e2b1fb;
-    --cosmic-300: #cd77f8;
-    --cosmic-400: #b83df5;
-    --cosmic-500: #9f0ce9;
-    --cosmic-600: #7709ae;
-    --cosmic-700: #500674;
-    --cosmic-800: #28033a;
-    --cosmic-900: #0d0113;
+    --cosmic-100: hsl(280, 90%, 96%);
+    --cosmic-200: hsl(280, 90%, 84%);
+    --cosmic-300: hsl(280, 90%, 72%);
+    --cosmic-400: hsl(280, 90%, 60%);
+    --cosmic-500: hsl(280, 90%, 48%);
+    --cosmic-600: hsl(280, 90%, 36%);
+    --cosmic-700: hsl(280, 90%, 24%);
+    --cosmic-800: hsl(280, 90%, 12%);
+    --cosmic-900: hsl(280, 90%, 4%);
 
-    --alert: #c62e65;
-    --warning: #ffa500;
-    --success: #008000;
-    --info: #0000ff;
-    --error: #ff0000;
-    --white: #f4f5f6;
-    --black: #0d0e11;
+    --alert: hsl(338, 62%, 48%);
+    --warning: hsl(39, 100%, 50%);
+    --success: hsl(120, 100%, 25%);
+    --info: hsl(240, 100%, 50%);
+    --error: hsl(0, 100%, 50%);
+    --white: hsl(210, 10%, 96%);
+    --black: hsl(225, 13%, 6%);
 
     --bg-color: var(--outerspace-100);
-    --bg-color-lighter: var(--outerspace-200);
+    --bg-color-light: var(--outerspace-200);
+    --bg-color-lighter: var(--outerspace-300);
     --text-color: var(--outerspace-900);
     --accent-color-darker: var(--cosmic-300);
     --accent-color-dark: var(--cosmic-400);
@@ -194,7 +196,8 @@
 
     @media (prefers-color-scheme: dark) {
       --bg-color: var(--outerspace-800);
-      --bg-color-lighter: var(--outerspace-700);
+      --bg-color-light: var(--outerspace-700);
+      --bg-color-lighter: var(--outerspace-600);
       --text-color: var(--outerspace-100);
       --accent-color-dark: var(--bluey-800);
       --accent-color-darker: var(--bluey-600);
@@ -212,6 +215,7 @@
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+   
   }
 
   h1,
@@ -220,10 +224,9 @@
   h4,
   h5,
   h6 {
-    font-weight: 700;
+    font-weight: 900;
     line-height: 1.1;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--baseline);
     text-transform: uppercase;
   }
 
@@ -259,21 +262,56 @@
   }
 
   a {
-    color: var(--accent-color);
     text-decoration: none;
-    transition: color 0.15s ease-in-out;
   }
 
-  a:hover {
-    color: var(--bluey-600);
+  a.button {
+    margin: 1rem 1rem;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: var(--text-color);
   }
 
-  a:focus {
-    outline: 2px solid var(--bluey-500);
-    outline-offset: 3px;
+  a.button:hover {
+    transform: scale(1.1); /* Adjust as needed */
+    box-shadow: 0 0 1rem var(--accent-color);
+    transition: 200ms ease-out;
+  }
+
+  a.button:active {
+    background-color: var(--text-color);
+    color: var(--accent-color-dark);
+    box-shadow: 0 0 1rem var(--accent-color);
+    transition: 200ms ease-out;
+  }
+
+  a.button:active {
+    transform: scale(0.9); /* Adjust as needed */
+    box-shadow: 0 0 1rem var(--accent-color);
+    transition: 80ms ease-out;
   }
 
   img {
     width: 100%;
     height: auto;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--color-bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
